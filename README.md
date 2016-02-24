@@ -28,6 +28,7 @@ If you don't have PyCharm you can get it from here: https://www.jetbrains.com/py
 2. Click the Publish button whenever you want to update and deploy the current project. 
 3. Before running the plugin, you'll need to have a file named `deployment.xml` in the project root folder,  
     this file tells the plugin how and which driver you're trying to update, you can use this snippet as a template:
+    
     ``` xml
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
     <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
@@ -47,6 +48,7 @@ If you don't have PyCharm you can get it from here: https://www.jetbrains.com/py
     <entry key="fileFilters">fileFilters</entry>
     </properties>
     ```
+    
 4. Upon activation the plugin collects and zipps the contents of the project (excluding filtered files, see `deployment.xml` `fileFilters` property),  
     the new zip is placed in a folder named `deployment/` in the project root.
     Then, the plugin uses the settings in the `deployment.xml` file to contact the server and updae the driver files currently online.
