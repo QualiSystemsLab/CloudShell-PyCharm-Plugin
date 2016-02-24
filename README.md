@@ -26,7 +26,7 @@ If you don't have PyCharm you can get it from here: https://www.jetbrains.com/py
     2. The run and run toolbar on the top right:  
         ![Runner Actions](/docs/images/build_menu.png)
 
-2. Before running the plugin, you'll need to have a file named deployment.xml in the project root folder,  
+2. Before running the plugin, you'll need to have a file named `deployment.xml` in the project root folder,  
     this file tells the plugin how and which driver you're trying to update, you can use this snippet as a template:
 ``` xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
