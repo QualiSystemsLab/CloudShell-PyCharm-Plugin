@@ -28,25 +28,25 @@ If you don't have PyCharm you can get it from here: https://www.jetbrains.com/py
 2. Click the Publish button whenever you want to update and deploy the current project. 
 3. Before running the plugin, you'll need to have a file named `deployment.xml` in the project root folder,  
     this file tells the plugin how and which driver you're trying to update, you can use this snippet as a template:
-``` xml
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
-<properties>
-<!-- The address of the Quali server on which to deploy, mandatory -->
-<entry key="serverRootAddress">serverRootAddress</entry>
-<!-- The port of the Quali server on which to deploy, defaults to "8029" -->
-<entry key="port">port</entry>
-<!-- The unique name of the driver as seen on the portal management, mandatory -->
-<entry key="driverUniqueName">driverUniqueName</entry>
-<!-- The server admin username, password and domain to use when deploying, defaults to "admin","admin" and "Global" -->
-<entry key="username">username</entry>
-<entry key="password">password</entry>
-<entry key="domain">domain</entry>
-<!-- Simple patterns to filter when sending the driver to the server separated by semicolons (e.g. "file.xml;logs/"),
-    on top of the patterns specified here the plugin will automatically filter the "deployment/" and ".idea/" folders and the "deployment.xml" file -->
-<entry key="fileFilters">fileFilters</entry>
-</properties>
-```
+    ``` xml
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+    <properties>
+    <!-- The address of the Quali server on which to deploy, mandatory -->
+    <entry key="serverRootAddress">serverRootAddress</entry>
+    <!-- The port of the Quali server on which to deploy, defaults to "8029" -->
+    <entry key="port">port</entry>
+    <!-- The unique name of the driver as seen on the portal management, mandatory -->
+    <entry key="driverUniqueName">driverUniqueName</entry>
+    <!-- The server admin username, password and domain to use when deploying, defaults to "admin","admin" and "Global" -->
+    <entry key="username">username</entry>
+    <entry key="password">password</entry>
+    <entry key="domain">domain</entry>
+    <!-- Simple patterns to filter when sending the driver to the server separated by semicolons (e.g. "file.xml;logs/"),
+        on top of the patterns specified here the plugin will automatically filter the "deployment/" and ".idea/" folders and the "deployment.xml" file -->
+    <entry key="fileFilters">fileFilters</entry>
+    </properties>
+    ```
 4. Upon activation the plugin collects and zipps the contents of the project (excluding filtered files, see `deployment.xml` `fileFilters` property),  
     the new zip is placed in a folder named `deployment/` in the project root.
     Then, the plugin uses the settings in the `deployment.xml` file to contact the server and updae the driver files currently online.
