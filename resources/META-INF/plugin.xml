@@ -1,0 +1,36 @@
+<idea-plugin version="2">
+  <id>com.qualisystems.pythonDriverPlugin</id>
+  <name>Quali Python Driver Uploader</name>
+  <version>1.0</version>
+  <vendor email="support@qualisystems.com" url="http://www.qualisystems.com/">QualiSystems</vendor>
+
+  <description><![CDATA[
+      Publishes the driver project on a Quali server.<br>
+      Make sure you have a `deployment.xml` file present in your project root.
+
+    ]]></description>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="QualiPublishDriverAction"
+            class="com.qualisystems.pythonDriverPlugin.QualiPublishDriverAction"
+            text="Publish Python Driver on CloudShell"
+            description="Publishes the driver project on CloudShell"
+            icon="/qs-icon.png">
+        <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+        <add-to-group group-id="RunnerActions" anchor="first"/>
+    </action>
+  </actions>
+
+</idea-plugin>
