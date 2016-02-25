@@ -34,18 +34,18 @@ If you don't have PyCharm you can get it from here: https://www.jetbrains.com/py
     <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
     <properties>
     <!-- The address of the Quali server on which to deploy, mandatory -->
-    <entry key="serverRootAddress">serverRootAddress</entry>
+    <entry key="serverRootAddress">localhost</entry>
     <!-- The port of the Quali server on which to deploy, defaults to "8029" -->
-    <entry key="port">port</entry>
+    <entry key="port">8029</entry>
     <!-- The unique name of the driver as seen on the portal management, mandatory -->
     <entry key="driverUniqueName">driverUniqueName</entry>
     <!-- The server admin username, password and domain to use when deploying, defaults to "admin","admin" and "Global" -->
-    <entry key="username">username</entry>
-    <entry key="password">password</entry>
-    <entry key="domain">domain</entry>
+    <entry key="username">admin</entry>
+    <entry key="password">admin</entry>
+    <entry key="domain">Global</entry>
     <!-- Simple patterns to filter when sending the driver to the server separated by semicolons (e.g. "file.xml;logs/"),
         on top of the patterns specified here the plugin will automatically filter the "deployment/" and ".idea/" folders and the "deployment.xml" file -->
-    <entry key="fileFilters">fileFilters</entry>
+    <entry key="fileFilters">dont_upload_me.xml</entry>
     </properties>
     ```
     
