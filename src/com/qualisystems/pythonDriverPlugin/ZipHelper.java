@@ -9,7 +9,7 @@ import java.nio.file.Paths;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-class ZipHelper {
+public class ZipHelper {
 
     private final String[] _filters;
 

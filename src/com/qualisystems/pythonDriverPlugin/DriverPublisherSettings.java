@@ -13,6 +13,7 @@ public class DriverPublisherSettings {
     String password;
     String domain;
     String[] fileFilters;
+    String sourceRootFolder;
 
     private static final String[] DefaultFileFilters = new String[] { ".idea", "deployment", "deployment.xml" };
 
@@ -32,6 +33,7 @@ public class DriverPublisherSettings {
         settings.username = deploymentProperties.getProperty("username", "admin");
         settings.password = deploymentProperties.getProperty("password", "admin");
         settings.domain = deploymentProperties.getProperty("domain", "Global");
+        settings.sourceRootFolder = deploymentProperties.getProperty("sourceRootFolder", null);
 
         String fileFiltersValue = deploymentProperties.getProperty("fileFilters", "");
 

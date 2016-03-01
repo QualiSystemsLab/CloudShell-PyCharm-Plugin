@@ -44,8 +44,11 @@ If you don't have PyCharm you can get it from here: https://www.jetbrains.com/py
     <entry key="password">admin</entry>
     <entry key="domain">Global</entry>
     <!-- Simple patterns to filter when sending the driver to the server separated by semicolons (e.g. "file.xml;logs/"),
-        on top of the patterns specified here the plugin will automatically filter the "deployment/" and ".idea/" folders and the "deployment.xml" file -->
+         on top of the patterns specified here the plugin will automatically filter the "deployment/" and ".idea/" folders and the "deployment.xml" file -->
     <entry key="fileFilters">dont_upload_me.xml</entry>
+    <!-- The folder to refer to as the project source root (if specified, the folder will be zipped
+         and deployed instead of the whole project), defaults to the root project folder -->
+    <entry key="sourceRootFolder">src/MyDriver/</entry>
     </properties>
     ```
     
