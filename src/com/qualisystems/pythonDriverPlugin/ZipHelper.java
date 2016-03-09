@@ -1,24 +1,34 @@
 package com.qualisystems.pythonDriverPlugin;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
+import java.nio.ByteBuffer;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 public class ZipHelper {
 
     private final String[] _filters;
+    private final Map<String, ByteBuffer> _extraFiles;
 
-    public ZipHelper(String... filters) {
+    public ZipHelper(Map<String, ByteBuffer> extraFiles, String... filters) {
 
         if (filters == null)
             filters = new String[0];
 
+        if (extraFiles == null)
+            extraFiles = new HashMap<>();
+
         _filters = filters;
+        _extraFiles = extraFiles;
+    }
+
+    public ZipHelper(String... filters) {
+
+        this(null, filters);
     }
 
     public void zipDir(String dirName, String nameZipFile) throws IOException {
@@ -32,6 +42,10 @@ public class ZipHelper {
         zip = new ZipOutputStream(fW);
 
         initialAddFolderToZip(dirName, zip);
+
+        for (Map.Entry<String, ByteBuffer> extraFile : _extraFiles.entrySet()) {
+            addFileToZip("", extraFile.getKey(), zip, false, new ByteArrayInputStream(extraFile.getValue().array(),extraFile.getValue().arrayOffset(), extraFile.getValue().limit()));
+        }
 
         zip.close();
         fW.close();
@@ -47,16 +61,18 @@ public class ZipHelper {
     }
 
     private void addFolderToZip(String path, String srcFolder, ZipOutputStream zip) throws IOException {
+
         File folder = new File(srcFolder);
+
         if (folder.list().length == 0) {
+
             addFileToZip(path , srcFolder, zip, true);
-        }
-        else {
+
+        } else {
             for (String fileName : folder.list()) {
                 if (path.equals("")) {
                     addFileToZip(folder.getName(), srcFolder + "/" + fileName, zip, false);
-                }
-                else {
+                } else {
                     addFileToZip(path + "/" + folder.getName(), srcFolder + "/" + fileName, zip, false);
                 }
             }
@@ -64,6 +80,10 @@ public class ZipHelper {
     }
 
     private void addFileToZip(String path, String srcFile, ZipOutputStream zip, boolean flag) throws IOException {
+        addFileToZip(path, srcFile, zip, flag, null);
+    }
+
+    private void addFileToZip(String path, String srcFile, ZipOutputStream zip, boolean flag, InputStream fileDataStream) throws IOException {
 
         File folder = new File(srcFile);
 
@@ -88,7 +108,8 @@ public class ZipHelper {
                 byte[] buf = new byte[1024];
                 int len;
 
-                FileInputStream in = new FileInputStream(srcFile);
+                InputStream in = fileDataStream == null ? new FileInputStream(srcFile) : fileDataStream;
+
                 zip.putNextEntry(new ZipEntry(nameInZip));
 
                 while ((len = in.read(buf)) > 0)

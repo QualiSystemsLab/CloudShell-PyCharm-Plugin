@@ -9,18 +9,31 @@ import com.intellij.openapi.progress.ProgressManager;
 import com.intellij.openapi.progress.Task;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.*;
 import java.net.UnknownHostException;
+import java.nio.ByteBuffer;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 public class QualiPublishDriverAction extends AnAction {
 
     public static final String DeploymentSettingsFileName = "deployment.xml";
+    public static final String DebugSettingsFileName = "debug.xml";
+
+    public static final String DebugSettingsFormatString =
+        "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n" +
+            "<properties>\n" +
+            "<entry key=\"loadFrom\">%s</entry>\n" +
+            "<entry key=\"waitForDebugger\">%s</entry>\n" +
+            "</properties>\n";
 
     @Override
     public void actionPerformed(AnActionEvent anActionEvent) {
@@ -84,10 +97,10 @@ public class QualiPublishDriverAction extends AnAction {
 
                     _settings = getDeploymentSettingsFromFile(deploymentSettingsFile);
 
+                    File zippedProjectFile = zipProjectFolder(project.getBasePath(), _settings);
+
                     ResourceManagementService resourceManagementService =
                         ResourceManagementService.OpenConnection(_settings.serverRootAddress, _settings.port, _settings.username, _settings.password, _settings.domain);
-
-                    File zippedProjectFile = zipProjectFolder(project.getBasePath(), _settings);
 
                     resourceManagementService.updateDriver(_settings.driverUniqueName, zippedProjectFile);
 
@@ -101,7 +114,16 @@ public class QualiPublishDriverAction extends AnAction {
 
     private File zipProjectFolder(String directory, DriverPublisherSettings settings) throws IOException {
 
-        ZipHelper zipHelper = new ZipHelper(settings.fileFilters);
+        Map<String, ByteBuffer> extras = new HashMap<>();
+
+        if (settings.runFromLocalProject) {
+
+            String debugSettingsFileContent = String.format(DebugSettingsFormatString, directory, Boolean.toString(settings.waitForDebugger));
+
+            extras.put(DebugSettingsFileName, StandardCharsets.UTF_8.encode(debugSettingsFileContent));
+        }
+
+        ZipHelper zipHelper = new ZipHelper(extras, settings.fileFilters);
 
         Path deploymentFilePath = Paths.get(directory, "deployment", settings.driverUniqueName + ".zip");
 

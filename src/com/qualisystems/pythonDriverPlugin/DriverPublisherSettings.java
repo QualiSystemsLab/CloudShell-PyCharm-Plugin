@@ -6,16 +6,18 @@ import java.util.Properties;
 
 public class DriverPublisherSettings {
 
-    String serverRootAddress;
-    int port;
-    String driverUniqueName;
-    String username;
-    String password;
-    String domain;
-    String[] fileFilters;
-    String sourceRootFolder;
-
     private static final String[] DefaultFileFilters = new String[] { ".idea", "deployment", "deployment.xml" };
+
+    public String serverRootAddress;
+    public int port;
+    public String driverUniqueName;
+    public String username;
+    public String password;
+    public String domain;
+    public String[] fileFilters;
+    public String sourceRootFolder;
+    public boolean waitForDebugger;
+    public boolean runFromLocalProject;
 
     public static DriverPublisherSettings fromProperties(Properties deploymentProperties) throws IllegalArgumentException {
 
@@ -34,6 +36,8 @@ public class DriverPublisherSettings {
         settings.password = deploymentProperties.getProperty("password", "admin");
         settings.domain = deploymentProperties.getProperty("domain", "Global");
         settings.sourceRootFolder = deploymentProperties.getProperty("sourceRootFolder", null);
+        settings.waitForDebugger = Boolean.parseBoolean(deploymentProperties.getProperty("waitForDebugger", "false"));
+        settings.runFromLocalProject = Boolean.parseBoolean(deploymentProperties.getProperty("runFromLocalProject", "false"));
 
         String fileFiltersValue = deploymentProperties.getProperty("fileFilters", "");
 

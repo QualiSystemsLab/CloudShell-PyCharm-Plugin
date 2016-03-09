@@ -33,22 +33,36 @@ If you don't have PyCharm you can get it from here: https://www.jetbrains.com/py
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
     <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
     <properties>
+    
     <!-- The address of the Quali server on which to deploy, mandatory -->
     <entry key="serverRootAddress">localhost</entry>
+    
     <!-- The port of the Quali server on which to deploy, defaults to "8029" -->
     <entry key="port">8029</entry>
+    
     <!-- The unique name of the driver as seen on the portal management, mandatory -->
     <entry key="driverUniqueName">driverUniqueName</entry>
+    
     <!-- The server admin username, password and domain to use when deploying, defaults to "admin","admin" and "Global" -->
     <entry key="username">admin</entry>
     <entry key="password">admin</entry>
     <entry key="domain">Global</entry>
+    
     <!-- Simple patterns to filter when sending the driver to the server separated by semicolons (e.g. "file.xml;logs/"),
          on top of the patterns specified here the plugin will automatically filter the "deployment/" and ".idea/" folders and the "deployment.xml" file -->
     <entry key="fileFilters">dont_upload_me.xml</entry>
+    
     <!-- The folder to refer to as the project source root (if specified, the folder will be zipped
          and deployed instead of the whole project), defaults to the root project folder -->
     <entry key="sourceRootFolder">src/MyDriver/</entry>
+    
+    <!-- Decides whether to run the driver from the current project directory for debugging purposes, defaults to "false" -->
+    <entry key="runFromLocalProject">false</entry>
+    
+    <!-- When `runFromLocalProject` is enabled, decides whether to wait for a debugger to attach
+         before running any Python driver code, defaults to "false" -->
+    <entry key="waitForDebugger">false</entry>
+    
     </properties>
     ```
     
