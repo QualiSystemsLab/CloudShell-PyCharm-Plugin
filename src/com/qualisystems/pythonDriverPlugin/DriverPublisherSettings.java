@@ -6,7 +6,7 @@ import java.util.Properties;
 
 public class DriverPublisherSettings {
 
-    private static final String[] DefaultFileFilters = new String[] { ".idea", "deployment", "deployment.xml" };
+    private static final String[] DefaultFileFilters = new String[] { ".idea", "deployment", "deployment.xml", "debug_info.txt" };
 
     public String serverRootAddress;
     public int port;
