@@ -9,7 +9,6 @@ import com.intellij.openapi.progress.ProgressManager;
 import com.intellij.openapi.progress.Task;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.*;
@@ -50,7 +49,7 @@ public class QualiPublishDriverAction extends AnAction {
 
             Messages.showErrorDialog(
                 project,
-                "Could not find deployment.xml in the project folder, cannot upload driver.",
+                String.format("Could not find %s in the project folder, cannot upload driver.", DeploymentSettingsFileName),
                 "Missing Deployment Configuration File");
 
             return;
