@@ -111,9 +111,19 @@ public class QualiPublishDriverAction extends AnAction {
         });
     }
 
-    private File zipProjectFolder(String directory, DriverPublisherSettings settings) throws IOException {
+    private File zipProjectFolder(String directory, DriverPublisherSettings settings) throws Exception {
 
         Map<String, ByteBuffer> extras = new HashMap<>();
+
+        if (settings.sourceRootFolder != null && !settings.sourceRootFolder.isEmpty()) {
+
+            Path sourceFolder = Paths.get(directory, settings.sourceRootFolder);
+
+            if (!Files.exists(sourceFolder))
+                throw new Exception(String.format("Couldn't find specified source folder \"%s\" as in \"%s\"", settings.sourceRootFolder, sourceFolder.toString()));
+
+            directory = sourceFolder.toString();
+        }
 
         if (settings.runFromLocalProject) {
 
@@ -125,9 +135,6 @@ public class QualiPublishDriverAction extends AnAction {
         ZipHelper zipHelper = new ZipHelper(extras, settings.fileFilters);
 
         Path deploymentFilePath = Paths.get(directory, "deployment", settings.driverUniqueName + ".zip");
-
-        if (settings.sourceRootFolder != null && !settings.sourceRootFolder.isEmpty())
-            directory = Paths.get(directory, settings.sourceRootFolder).toString();
 
         zipHelper.zipDir(directory, deploymentFilePath.toString());
 
