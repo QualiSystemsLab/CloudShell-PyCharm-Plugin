@@ -54,8 +54,12 @@ public class ZipHelper {
     private void initialAddFolderToZip(String srcFolder, ZipOutputStream zip) throws IOException {
 
         File folder = new File(srcFolder);
-
-        for (String fileName : folder.list()) {
+        String[] list = folder.list();
+        if(list == null)
+        {
+            throw new IOException(String.format("error: folder %s does not exist in the project",srcFolder));
+        }
+        for (String fileName : list) {
             addFileToZip("", srcFolder + "/" + fileName, zip, false);
         }
     }

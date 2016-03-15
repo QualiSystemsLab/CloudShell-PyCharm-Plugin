@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="properties" type="propertiesType"/>
+  <xs:complexType name="sourcesType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="source" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="scriptsType">
+    <xs:sequence>
+      <xs:element type="authoringItemType" name="authoringItem" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="authoringItemType">
+    <xs:sequence>
+      <xs:element type="sourcesType" name="sources"/>
+      <xs:element type="xs:string" name="targetName"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="driversType">
+    <xs:sequence>
+      <xs:element type="authoringItemType" name="authoringItem" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="propertiesType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="serverRootAddress">
+        <xs:annotation>
+          <xs:documentation>The address of the Quali server on which to deploy, mandatory</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="port">
+        <xs:annotation>
+          <xs:documentation>The port of the Quali server on which to deploy, defaults to "8029"</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="driverUniqueName">
+        <xs:annotation>
+          <xs:documentation>The unique name of the driver as seen on the portal management, mandatory</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="username">
+        <xs:annotation>
+          <xs:documentation>The server admin username, password and domain to use when deploying, defaults to "admin","admin" and "Global"</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="password"/>
+      <xs:element type="xs:string" name="domain"/>
+      <xs:element type="xs:string" name="fileFilters">
+        <xs:annotation>
+          <xs:documentation>Simple patterns to filter when sending the driver to the server separated by semicolons (e.g. "file.xml;logs/"),
+         on top of the patterns specified here the plugin will automatically filter the "deployment/" and ".idea/" folders and the "deployment.xml" file</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sourceRootFolder">
+        <xs:annotation>
+          <xs:documentation>The folder to refer to as the project source root (if specified, the folder will be zipped
+         and deployed instead of the whole project), defaults to the root project folder</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="runFromLocalProject">
+        <xs:annotation>
+          <xs:documentation>Decides whether to run the driver from the current project directory for debugging purposes, defaults to "false"</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="waitForDebugger">
+        <xs:annotation>
+          <xs:documentation>When `runFromLocalProject` is enabled, decides whether to wait for a debugger to attach
+         before running any Python driver code, defaults to "false"</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="driversType" name="drivers"/>
+      <xs:element type="scriptsType" name="scripts"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
