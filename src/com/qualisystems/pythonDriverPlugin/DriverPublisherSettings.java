@@ -18,6 +18,8 @@ public class DriverPublisherSettings {
     public String sourceRootFolder;
     public boolean waitForDebugger;
     public boolean runFromLocalProject;
+    public ProvisioningItemData[] drivers;
+    public ProvisioningItemData[] scripts;
 
     public static DriverPublisherSettings fromProperties(Properties deploymentProperties) throws IllegalArgumentException {
 
@@ -46,5 +48,10 @@ public class DriverPublisherSettings {
         settings.fileFilters = (String[])ArrayUtils.addAll(DefaultFileFilters, extraFilters);
 
         return settings;
+    }
+
+    public class ProvisioningItemData{
+        public String sourceFolder;
+        public String targetName;
     }
 }
