@@ -5,6 +5,7 @@ import java.nio.ByteBuffer;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
@@ -49,6 +50,29 @@ public class ZipHelper {
 
         zip.close();
         fW.close();
+    }
+
+    public String zipFiles(String zipFileName, List<String> filePaths)throws IOException
+    {
+        ZipOutputStream zip = null;
+        FileOutputStream fW = null;
+
+        String zipFilePath = Files.createDirectories(Paths.get(new File(zipFileName).getParent())).toString();
+
+        try {
+            fW = new FileOutputStream(zipFileName);
+            zip = new ZipOutputStream(fW);
+
+            for (String filePath : filePaths) {
+                addFileToZip("", filePath, zip, false);
+            }
+        }
+        finally {
+            zip.close();
+            fW.close();
+        }
+
+        return zipFilePath;
     }
 
     private void initialAddFolderToZip(String srcFolder, ZipOutputStream zip) throws IOException {

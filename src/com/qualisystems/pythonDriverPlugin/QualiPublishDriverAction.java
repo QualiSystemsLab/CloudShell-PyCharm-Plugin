@@ -9,8 +9,18 @@ import com.intellij.openapi.progress.ProgressManager;
 import com.intellij.openapi.progress.Task;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
+import com.qualisystems.pythonDriverPlugin.archiveAnalizers.AchiveAnalyzerFactory;
+import com.qualisystems.pythonDriverPlugin.archiveAnalizers.IArchiveAnalyzer;
+import com.qualisystems.pythonDriverPlugin.deployment.ObjectFactory;
+import com.qualisystems.pythonDriverPlugin.deployment.PropertiesType;
+import com.qualisystems.pythonDriverPlugin.updaters.IUpdater;
+import com.qualisystems.pythonDriverPlugin.updaters.UpdaterFactory;
 import org.jetbrains.annotations.NotNull;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
 import java.io.*;
 import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
@@ -20,7 +30,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Properties;
 
 public class QualiPublishDriverAction extends AnAction {
 
@@ -70,13 +79,13 @@ public class QualiPublishDriverAction extends AnAction {
                     if (_exception instanceof UnknownHostException)
                         Messages.showErrorDialog(
                             project,
-                            "Failed uploading new driver file:\n Unknown Host",
-                            "Publishing Python Driver on CloudShell");
+                            "Failed uploading file:\n Unknown Host",
+                            "Publishing on CloudShell");
                     else
                         Messages.showErrorDialog(
                             project,
-                            "Failed uploading new driver file:\n" + _exception.toString(),
-                            "Publishing Python Driver on CloudShell");
+                            "Failed uploading file:\n" + _exception.toString(),
+                            "Publishing on CloudShell");
 
                     return;
                 }
@@ -85,7 +94,7 @@ public class QualiPublishDriverAction extends AnAction {
 
                 Messages.showInfoMessage(
                     project,
-                    String.format("Successfully uploaded new driver file for driver `%s`", _settings.driverUniqueName),
+                    String.format("successfully published items"),
                     "Publishing Python Driver on CloudShell");
             }
 
@@ -93,15 +102,26 @@ public class QualiPublishDriverAction extends AnAction {
             public void run(@NotNull ProgressIndicator progressIndicator) {
 
                 try {
-
+                    String basePath = project.getBasePath();
                     _settings = getDeploymentSettingsFromFile(deploymentSettingsFile);
 
-                    File zippedProjectFile = zipProjectFolder(project.getBasePath(), _settings);
+                    IArchiveAnalyzer driversAnalyzer = AchiveAnalyzerFactory.createAnalyzer(_settings.drivers, _settings.fileFilters, basePath);
+                    HashMap<String, String> arcivedDriverFiles = driversAnalyzer.getArcivedFiles();
 
-                    ResourceManagementService resourceManagementService =
-                        ResourceManagementService.OpenConnection(_settings.serverRootAddress, _settings.port, _settings.username, _settings.password, _settings.domain);
+                    IArchiveAnalyzer scriptsAnalyzer = AchiveAnalyzerFactory.createAnalyzer(_settings.scripts, _settings.fileFilters, basePath);
+                    HashMap<String, String> arcivedScriptsFiles = scriptsAnalyzer.getArcivedFiles();
 
-                    resourceManagementService.updateDriver(_settings.driverUniqueName, zippedProjectFile);
+                    if(arcivedDriverFiles.size() ==0 && arcivedScriptsFiles.size() ==0)
+                    {
+                        throw new Exception("no items found for publishing");
+                    }
+
+                    IUpdater driversUpdater = UpdaterFactory.createDriversUpdater(_settings);
+                    driversUpdater.updateFiles(arcivedDriverFiles);
+
+                    IUpdater scriptsUpdater = UpdaterFactory.createScriptsUpdater(_settings);
+                    scriptsUpdater.updateFiles(arcivedScriptsFiles);
+
 
                 } catch (Exception e) {
 
@@ -135,13 +155,20 @@ public class QualiPublishDriverAction extends AnAction {
     }
 
     private DriverPublisherSettings getDeploymentSettingsFromFile(File deploymentSettingsFile) throws IOException {
+        JAXBContext jaxbContext;
 
-        Properties properties = new Properties();
+        try {
+            InputStream inputStream = Files.newInputStream(deploymentSettingsFile.toPath());
+            jaxbContext = JAXBContext.newInstance(ObjectFactory.class);
+            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+            JAXBElement<PropertiesType> unmarshalledObject = (JAXBElement<PropertiesType>)unmarshaller.unmarshal(inputStream);
 
-        properties.loadFromXML(Files.newInputStream(deploymentSettingsFile.toPath()));
+            PropertiesType properties = unmarshalledObject.getValue();
+            DriverPublisherSettings settings = DriverPublisherSettings.fromProperties(properties);
+            return settings;
 
-        DriverPublisherSettings settings = DriverPublisherSettings.fromProperties(properties);
-
-        return settings;
+        } catch (JAXBException e) {
+            throw new IOException(e);
+        }
     }
 }

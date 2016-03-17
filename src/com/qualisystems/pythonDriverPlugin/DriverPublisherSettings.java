@@ -1,8 +1,9 @@
 package com.qualisystems.pythonDriverPlugin;
 
+import com.qualisystems.pythonDriverPlugin.deployment.DriversType;
+import com.qualisystems.pythonDriverPlugin.deployment.PropertiesType;
+import com.qualisystems.pythonDriverPlugin.deployment.ScriptsType;
 import org.apache.commons.lang.ArrayUtils;
-
-import java.util.Properties;
 
 public class DriverPublisherSettings {
 
@@ -18,40 +19,61 @@ public class DriverPublisherSettings {
     public String sourceRootFolder;
     public boolean waitForDebugger;
     public boolean runFromLocalProject;
-    public ProvisioningItemData[] drivers;
-    public ProvisioningItemData[] scripts;
+    public DriversType drivers;
+    public ScriptsType scripts;
 
-    public static DriverPublisherSettings fromProperties(Properties deploymentProperties) throws IllegalArgumentException {
+    public static DriverPublisherSettings fromProperties(PropertiesType deploymentProperties) throws IllegalArgumentException {
 
-        if (!deploymentProperties.containsKey("driverUniqueName"))
-            throw new IllegalArgumentException("Missing `driverUniqueName` key in project's deployment.xml");
-
-        if (!deploymentProperties.containsKey("serverRootAddress"))
+        ensureDeploymentProperties(deploymentProperties);
+        if (deploymentProperties.getServerRootAddress() == null || deploymentProperties.getServerRootAddress().isEmpty())
             throw new IllegalArgumentException("Missing `serverRootAddress` key in project's deployment.xml");
 
         DriverPublisherSettings settings = new DriverPublisherSettings();
 
-        settings.serverRootAddress = deploymentProperties.getProperty("serverRootAddress");
-        settings.port = Integer.parseInt(deploymentProperties.getProperty("port", "8029"));
-        settings.driverUniqueName = deploymentProperties.getProperty("driverUniqueName");
-        settings.username = deploymentProperties.getProperty("username", "admin");
-        settings.password = deploymentProperties.getProperty("password", "admin");
-        settings.domain = deploymentProperties.getProperty("domain", "Global");
-        settings.sourceRootFolder = deploymentProperties.getProperty("sourceRootFolder", null);
-        settings.waitForDebugger = Boolean.parseBoolean(deploymentProperties.getProperty("waitForDebugger", "false"));
-        settings.runFromLocalProject = Boolean.parseBoolean(deploymentProperties.getProperty("runFromLocalProject", "false"));
+        settings.serverRootAddress = deploymentProperties.getServerRootAddress();
+        settings.port = Integer.parseInt(deploymentProperties.getPort());
+        settings.driverUniqueName = deploymentProperties.getDriverUniqueName();
+        settings.username = deploymentProperties.getUsername();
+        settings.password = deploymentProperties.getPassword();
+        settings.domain = deploymentProperties.getDomain();
+        settings.sourceRootFolder = deploymentProperties.getSourceRootFolder();
+        settings.waitForDebugger = Boolean.parseBoolean(deploymentProperties.getWaitForDebugger());
+        settings.runFromLocalProject = Boolean.parseBoolean(deploymentProperties.getRunFromLocalProject());
 
-        String fileFiltersValue = deploymentProperties.getProperty("fileFilters", "");
-
+        String fileFiltersValue = deploymentProperties.getFileFilters();
         String[] extraFilters = fileFiltersValue.isEmpty() ? new String[0] : fileFiltersValue.split(";");
-
         settings.fileFilters = (String[])ArrayUtils.addAll(DefaultFileFilters, extraFilters);
+
+        settings.drivers = deploymentProperties.getDrivers();
+        settings.scripts = deploymentProperties.getScripts();
 
         return settings;
     }
 
-    public class ProvisioningItemData{
-        public String sourceFolder;
-        public String targetName;
+    private static void ensureDeploymentProperties(PropertiesType deploymentProperties) throws IllegalArgumentException{
+
+        if (deploymentProperties.getServerRootAddress() == null || deploymentProperties.getServerRootAddress().isEmpty())
+            throw new IllegalArgumentException("Missing `serverRootAddress` key in project's deployment.xml");
+
+        if(deploymentProperties.getPort() == null || deploymentProperties.getPort().isEmpty())
+            deploymentProperties.setPort("8029");
+
+        if(deploymentProperties.getUsername() == null || deploymentProperties.getUsername().isEmpty())
+            deploymentProperties.setUsername("admin");
+
+        if(deploymentProperties.getPassword() == null || deploymentProperties.getPassword().isEmpty())
+            deploymentProperties.setPassword("admin");
+
+        if(deploymentProperties.getDomain() == null || deploymentProperties.getDomain().isEmpty())
+            deploymentProperties.setDomain("Global");
+
+        if(deploymentProperties.getWaitForDebugger() == null || deploymentProperties.getWaitForDebugger().isEmpty())
+            deploymentProperties.setWaitForDebugger("false");
+
+        if(deploymentProperties.getRunFromLocalProject() == null || deploymentProperties.getRunFromLocalProject().isEmpty())
+            deploymentProperties.setRunFromLocalProject("false");
+
     }
+
+
 }
