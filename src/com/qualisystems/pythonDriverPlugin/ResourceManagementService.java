@@ -33,6 +33,20 @@ public class ResourceManagementService {
         "<driverFileName>%s</driverFileName>\n" +
         "</UpdateDriver>";
 
+    private static final String UpdateScriptEndpointPath = "ResourceManagerApiService/UpdateScript";
+    private static final String UpdateScriptRequestFormat =
+            "<UpdateScript>\n" +
+            "<scriptName>%s</scriptName>\n" +
+            "<scriptFile>%s</scriptFile>\n" +
+            "<scriptFileName>%s</scriptFileName>\n" +
+            "</UpdateScript>";
+
+
+    private final String _serverAddress;
+    private final String _hostname;
+    private final int _port;
+    private String _authToken;
+
     public static ResourceManagementService OpenConnection(String serverAddress, int port, String username, String password, String domain) throws Exception {
 
         ResourceManagementService resourceManagementService = new ResourceManagementService(serverAddress, port);
@@ -41,6 +55,26 @@ public class ResourceManagementService {
 
         return resourceManagementService;
     }
+
+    public void updateDriver(String driverName, File newDriverFile) throws Exception {
+
+        Update(driverName, newDriverFile,UpdateDriverEndpointPath,UpdateDriverRequestFormat);
+    }
+
+    public void updateScript(String scriptName, File newScriptFile)throws Exception {
+
+        Update(scriptName, newScriptFile,UpdateScriptEndpointPath,UpdateScriptRequestFormat);
+    }
+
+    private void Update(String authoringItemName, File newFile, String endpointPath, String updateRequestFormat) throws Exception {
+        String base64DriverFile = Base64.getEncoder().encodeToString(Files.readAllBytes(newFile.toPath()));
+
+        String serverURL = String.format(TargetServerURLFormat, _serverAddress, _port, endpointPath);
+
+        sendMessage(new URL(serverURL), String.format(updateRequestFormat, authoringItemName, base64DriverFile, newFile.getName()));
+    }
+
+
 
     private void login(String username, String password, String domain) throws Exception {
 
@@ -54,16 +88,6 @@ public class ResourceManagementService {
             throw new Exception("No token element in logon response");
 
         _authToken = tokenElement.item(0).getAttributes().getNamedItem("Token").getTextContent();
-    }
-
-    public void updateDriver(String driverName, File newDriverFile) throws Exception {
-
-        String base64DriverFile =
-            Base64.getEncoder().encodeToString(Files.readAllBytes(newDriverFile.toPath()));
-
-        String serverURL = String.format(TargetServerURLFormat, _serverAddress, _port, UpdateDriverEndpointPath);
-
-        sendMessage(new URL(serverURL), String.format(UpdateDriverRequestFormat, driverName, base64DriverFile, newDriverFile.getName()));
     }
 
     private Document sendMessage(URL requestURL, String message) throws Exception {
@@ -109,12 +133,6 @@ public class ResourceManagementService {
         return responseCode >= 200 && responseCode < 300;
     }
 
-    private final String _serverAddress;
-    private final String _hostname;
-    private final int _port;
-
-    private String _authToken;
-
     private ResourceManagementService(String serverAddress, int port) {
 
         _serverAddress = serverAddress;
@@ -130,4 +148,6 @@ public class ResourceManagementService {
 
         _hostname = hostname;
     }
+
+
 }
