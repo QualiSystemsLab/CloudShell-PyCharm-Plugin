@@ -31,41 +31,65 @@ If you don't have PyCharm you can get it from here: https://www.jetbrains.com/py
     
     ``` xml
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-    <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
     <properties>
-    
-    <!-- The address of the Quali server on which to deploy, mandatory -->
-    <entry key="serverRootAddress">localhost</entry>
-    
-    <!-- The port of the Quali server on which to deploy, defaults to "8029" -->
-    <entry key="port">8029</entry>
-    
-    <!-- The unique name of the driver as seen on the portal management, mandatory -->
-    <entry key="driverUniqueName">driverUniqueName</entry>
-    
-    <!-- The server admin username, password and domain to use when deploying, defaults to "admin","admin" and "Global" -->
-    <entry key="username">admin</entry>
-    <entry key="password">admin</entry>
-    <entry key="domain">Global</entry>
-    
-    <!-- Simple patterns to filter when sending the driver to the server separated by semicolons (e.g. "file.xml;logs/"),
-         on top of the patterns specified here the plugin will automatically filter the "deployment/" and ".idea/" folders and the "deployment.xml" file -->
-    <entry key="fileFilters">dont_upload_me.xml</entry>
-    
-    <!-- The folder to refer to as the project source root (if specified, the folder will be zipped
-         and deployed instead of the whole project), defaults to the root project folder -->
-    <entry key="sourceRootFolder">src/MyDriver/</entry>
-    
-    <!-- Decides whether to run the driver from the current project directory for debugging purposes, defaults to "false" -->
-    <entry key="runFromLocalProject">false</entry>
-    
-    <!-- When `runFromLocalProject` is enabled, decides whether to wait for a debugger to attach
-         before running any Python driver code, defaults to "false" -->
-    <entry key="waitForDebugger">false</entry>
-    
+
+        <!-- The address of the Quali server on which to deploy, mandatory -->
+        <serverRootAddress>localhost</serverRootAddress>
+
+        <!-- The port of the Quali server on which to deploy, defaults to "8029" -->
+        <port>8029</port>
+
+        <!-- The server admin username, password and domain to use when deploying, defaults to "admin","admin" and "Global" -->
+        <username>admin</username>
+        <password>admin</password>
+        <domain>Global</domain>
+
+        <!-- Simple patterns to filter when sending the driver to the server separated by semicolons (e.g. "file.xml;logs/", also supports regular expressions),
+             on top of the patterns specified here the plugin will automatically filter the "deployment/" and ".idea/" folders and the "deployment.xml" file -->
+        <fileFilters>dont_upload_me.xml</fileFilters>
+
+        <-- The drivers to update, holds one or more drivers -->
+        <drivers>
+           <!-- runFromLocalProject - Decides whether to run the driver from the current project directory for debugging purposes, defaults to "false" -->
+           <!-- waitForDebugger - When `runFromLocalProject` is enabled, decides whether to wait for a debugger to attach before running any Python driver code, defaults to "false" -->
+           <!-- sourceRootFolder - The folder to refer to as the project source root (if specified, the folder will be zipped and deployed instead of the whole project), defaults to the root project folder -->
+            <driver runFromLocalProject="true" waitForDebugger="true" sourceRootFolder="driver1">
+                <!-- A list of paths to the driver's files or folders relative to the project's root.
+                     may be a path to a directory, in which case all the files and folders under the directory are added into the driver's zip file.
+                     if the <sources> element is not specified, all the files under the project are added to the driver's zip file -->
+                <sources>
+                     <source>driver1/drivermetadata.xml</source>
+                     <source>driver1/qualidriver.py</source>
+                     <source>driver1/SampleResourceDriver.py</source>
+                     <source>driver1/requirements.txt</source>
+                </sources>
+                <!-- the driver name of the driver to update -->
+                <targetName>driverToUpdate</targetName>
+            </driver>
+            <driver>
+                <sources>
+                    <source>driver2</source>
+                </sources>
+                <targetName>driverToUpdate2</targetName>
+            </driver>
+        </drivers>
+
+        <-- The scripts to update, holds one or more scripts -->
+        <scripts>
+            <script>
+                <!-- A list of paths to the script's files or folders relative to the project's root.
+                    if the <sources> element is not specified, all the files under the project are added to the script's zip file.
+                    if only one file is specified, the file will not be compressed into a zip file.
+                 -->
+                <sources>
+                    <source>script1.py</source>
+                </sources>
+                <targetName>scriptToUpdate</targetName>
+            </script>
+        </scripts>
     </properties>
     ```
-    
-4. Upon activation the plugin collects and zipps the contents of the project (excluding filtered files, see `deployment.xml` `fileFilters` property),  
+
+4. Upon activation the plugin collects and zipps the contents of the project (excluding filtered files, see `deployment.xml` `fileFilters` property),
     the new zip is placed in a folder named `deployment/` in the project root.
     Then, the plugin uses the settings in the `deployment.xml` file to contact the server and updae the driver files currently online.
