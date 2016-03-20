@@ -84,6 +84,7 @@ If you don't have PyCharm you can get it from here: https://www.jetbrains.com/py
                 <sources>
                     <source>script1.py</source>
                 </sources>
+                 <!-- the script name of the script to update -->
                 <targetName>scriptToUpdate</targetName>
             </script>
         </scripts>
