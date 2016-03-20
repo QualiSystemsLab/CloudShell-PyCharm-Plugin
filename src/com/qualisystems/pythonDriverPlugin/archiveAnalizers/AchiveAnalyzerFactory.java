@@ -12,7 +12,7 @@ public class AchiveAnalyzerFactory {
         if(drivers == null)
             return new NoItemsAnalyzer();
 
-        return new DriversArchiveAnalyzer(drivers.getAuthoringItem(),fileFilters,basePath);
+        return new DriversArchiveAnalyzer(drivers.getDriver(),fileFilters,basePath);
     }
 
     public static IArchiveAnalyzer createAnalyzer(ScriptsType scripts, String[] fileFilters, String basePath)
@@ -20,6 +20,6 @@ public class AchiveAnalyzerFactory {
         if(scripts == null)
             return new NoItemsAnalyzer();
 
-        return new ScriptsArchiveAnalyzer(scripts.getAuthoringItem(),fileFilters,basePath);
+        return new ScriptsArchiveAnalyzer(scripts.getScript(),fileFilters,basePath);
     }
 }

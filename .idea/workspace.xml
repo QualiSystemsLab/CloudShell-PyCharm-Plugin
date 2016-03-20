@@ -4,23 +4,26 @@
     <bookmark url="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/QualiPublishDriverAction.java" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba394122-d349-4311-bca0-b2d512761525" name="Default" comment="change xml properties file">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/AchiveAnalyzerFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ArchiveAnalyzer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/DriversArchiveAnalyzer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/IArchiveAnalyzer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/NoItemsAnalyzer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ScriptsArchiveAnalyzer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/DriversUpdater.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/IUpdater.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/ScriptsUpdater.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/Updater.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/UpdaterFactory.java" />
+    <list default="true" id="ba394122-d349-4311-bca0-b2d512761525" name="Default" comment="finish plugin changes">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/generate_pojo" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/AuthoringItemType.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/DriverPublisherSettings.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/DriverPublisherSettings.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/QualiPublishDriverAction.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/QualiPublishDriverAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/ResourceManagementService.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/ResourceManagementService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/ZipHelper.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/ZipHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/AchiveAnalyzerFactory.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/AchiveAnalyzerFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ArchiveAnalyzer.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ArchiveAnalyzer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/DriversArchiveAnalyzer.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/DriversArchiveAnalyzer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ScriptsArchiveAnalyzer.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ScriptsArchiveAnalyzer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/DriversType.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/DriversType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/ObjectFactory.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/ObjectFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/PropertiesType.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/PropertiesType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/ScriptsType.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/ScriptsType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/SourcesType.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/SourcesType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xml" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xsd" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/DriversUpdater.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/DriversUpdater.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/ScriptsUpdater.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/ScriptsUpdater.java" />
     </list>
     <ignored path="intelli-qs-plugin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,94 +48,42 @@
       <file leaf-file-name="QualiPublishDriverAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/QualiPublishDriverAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.586206">
-              <caret line="111" column="90" selection-start-line="111" selection-start-column="90" selection-end-line="111" selection-end-column="90" />
+            <state vertical-scroll-proportion="17.0">
+              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
               <folding>
-                <element signature="method#getDeploymentSettingsFromFile#0;class#QualiPublishDriverAction#0" expanded="false" />
+                <element signature="method#onSuccess#0;class#2171:5079" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdaterFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/UpdaterFactory.java">
+      <file leaf-file-name="deployment.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IUpdater.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/IUpdater.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.13606557">
+              <caret line="30" column="66" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Updater.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/Updater.java">
+      <file leaf-file-name="deployment.xsd" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xsd">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScriptsArchiveAnalyzer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ScriptsArchiveAnalyzer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state vertical-scroll-proportion="-6.4716983">
+              <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScriptsUpdater.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/ScriptsUpdater.java">
+      <file leaf-file-name="ZipHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/ZipHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="85" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="85" />
+            <state vertical-scroll-proportion="-10.586206">
+              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#352#353#0" expanded="true" />
-                <element signature="e#383#384#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DriversUpdater.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/DriversUpdater.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#375#376#0" expanded="true" />
-                <element signature="e#406#407#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResourceManagementService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/ResourceManagementService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-              <folding>
-                <element signature="method#ResourceManagementService#0;class#ResourceManagementService#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -141,8 +92,8 @@
       <file leaf-file-name="ArchiveAnalyzer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ArchiveAnalyzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.068966">
-              <caret line="67" column="38" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="38" />
+            <state vertical-scroll-proportion="-17.758621">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -150,12 +101,70 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DriverPublisherSettings.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BiConsumer.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/util/function/BiConsumer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DriverPublisherSettings.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/DriverPublisherSettings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22018349">
-              <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DriversType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/DriversType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DriversArchiveAnalyzer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/DriversArchiveAnalyzer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1333#1334#0" expanded="true" />
+                <element signature="e#1365#1366#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DriverType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/DriverType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.344828">
+              <caret line="147" column="9" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2294#2295#0" expanded="true" />
+                <element signature="e#2324#2325#0" expanded="true" />
+                <element signature="e#2537#2538#0" expanded="true" />
+                <element signature="e#2573#2574#0" expanded="true" />
+                <element signature="e#2768#2769#0" expanded="true" />
+                <element signature="e#2801#2802#0" expanded="true" />
+                <element signature="e#3010#3011#0" expanded="true" />
+                <element signature="e#3049#3050#0" expanded="true" />
+                <element signature="e#3634#3635#0" expanded="true" />
+                <element signature="e#3682#3683#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -199,37 +208,39 @@
         <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/AuthoringItemType.java" />
-        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xsd" />
-        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/DriversType.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/ScriptsType.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xsd.xml" />
-        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xml" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/ObjectFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/DriverPublisherSettings.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/IUpdater.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/DriversUpdater.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/ScriptsUpdater.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ScriptArchiveAnalizer.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/DriverArchiveAnalizer.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/Extentions.java" />
-        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/ZipHelper.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ArchiveAnalizer.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/AchiveAnalizerFactory.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/IArchiveAnalizer.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/IArchiveAnalyzer.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/ArchiveManager.java" />
-        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/DriversArchiveAnalyzer.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/ResourceManagementService.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/NoItemsAnalyzer.java" />
-        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/AchiveAnalyzerFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ArchiveAnalyzer.java" />
-        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ScriptsArchiveAnalyzer.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/IUpdater.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/ScriptsUpdater.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/DriversUpdater.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/UpdaterFactory.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/Updater.java" />
+        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/DriversType.java" />
+        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/generate_pojo" />
+        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/AchiveAnalyzerFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/DriverPublisherSettings.java" />
+        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/DriverType.java" />
+        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/ZipHelper.java" />
+        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ScriptsArchiveAnalyzer.java" />
+        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ArchiveAnalyzer.java" />
+        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/DriversArchiveAnalyzer.java" />
+        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xsd" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/QualiPublishDriverAction.java" />
+        <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xml" />
       </list>
     </option>
   </component>
@@ -396,6 +407,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="updaters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intelli-qs-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CloudShell-PyCharm-Plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pythonDriverPlugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deployment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -808,7 +841,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458026962058</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="change xml properties file">
+      <created>1458198490910</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1458198490910</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -826,21 +865,21 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14393939" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28138527" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17424242" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16017316" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15565032" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28731343" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39718616" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21536796" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -864,50 +903,20 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change xml properties file" />
-    <option name="LAST_COMMIT_MESSAGE" value="change xml properties file" />
+    <MESSAGE value="finish plugin changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish plugin changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/QualiPublishDriverAction.java</url>
-          <line>111</line>
-          <properties />
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/QualiPublishDriverAction.java</url>
-          <line>104</line>
-          <properties />
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ScriptsArchiveAnalyzer.java</url>
-          <line>32</line>
-          <properties />
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/QualiPublishDriverAction.java</url>
-          <line>118</line>
-          <properties />
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/Updater.java</url>
-          <line>30</line>
-          <properties />
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="54" />
+      <option name="time" value="72" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
         <watch expression="elements.item(0)" />
+        <watch expression="new File(_basePath).toPath().getFileName()" />
       </configuration>
     </watches-manager>
   </component>
@@ -916,34 +925,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="435" column="0" selection-start-line="435" selection-start-column="0" selection-end-line="435" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2129" column="0" selection-start-line="2129" selection-start-column="0" selection-end-line="2129" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/jre/lib/rt.jar!/sun/reflect/generics/parser/SignatureParser.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.814876">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/util/Base64.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33280757">
-          <caret line="78" column="12" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/nio/file/OpenOption.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5362776">
@@ -1042,42 +1023,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/AuthoringItemType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#2447#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#1687#1688#0" expanded="true" />
-            <element signature="e#1717#1718#0" expanded="true" />
-            <element signature="e#1930#1931#0" expanded="true" />
-            <element signature="e#1966#1967#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/ObjectFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="46" column="25" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1631#1632#0" expanded="true" />
-            <element signature="e#1674#1675#0" expanded="true" />
-            <element signature="e#1794#1795#0" expanded="true" />
-            <element signature="e#1834#1835#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/PropertiesType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="120" column="18" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="18" />
-          <folding>
-            <element signature="e#3956#3957#0" expanded="false" />
-            <element signature="e#3983#3984#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1674#1675#0" expanded="false" />
+            <element signature="e#1794#1795#0" expanded="false" />
+            <element signature="e#1834#1835#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1087,24 +1041,8 @@
         <state vertical-scroll-proportion="0.03794643">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.0">
-          <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1126,51 +1064,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/util/function/BiConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/io/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1113" column="20" selection-start-line="1113" selection-start-column="20" selection-end-line="1113" selection-end-column="20" />
-          <folding>
-            <element signature="method#list#0;class#File#0" expanded="false" />
-            <element signature="docComment;method#toPath#0;class#File#0" expanded="false" />
-            <element signature="method#toPath#0;class#File#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/SourcesType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/nio/file/Path.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="134" column="9" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/ZipHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1187,7 +1085,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1200,62 +1098,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/DriversArchiveAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-          <folding>
-            <element signature="e#661#662#0" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/IArchiveAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/nio/file/Files.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1267" column="23" selection-start-line="1267" selection-start-column="23" selection-end-line="1267" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/DriversType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/NoItemsAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/AchiveAnalyzerFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1294,67 +1141,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="85" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="85" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#352#353#0" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ScriptsArchiveAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/DriversUpdater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/Updater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ArchiveAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.068966">
-          <caret line="67" column="38" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/IUpdater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/ResourceManagementService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="method#ResourceManagementService#0;class#ResourceManagementService#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#256#257#0" expanded="false" />
+            <element signature="e#287#288#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1369,20 +1158,277 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/QualiPublishDriverAction.java">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/ide/ide-scripting.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.586206">
-          <caret line="111" column="90" selection-start-line="111" selection-start-column="90" selection-end-line="111" selection-end-column="90" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/SourcesType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
           <folding>
-            <element signature="method#getDeploymentSettingsFromFile#0;class#QualiPublishDriverAction#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="method#getSource#0;class#SourcesType#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1113" column="20" selection-start-line="1113" selection-start-column="20" selection-end-line="1113" selection-end-column="20" />
+          <folding>
+            <element signature="method#list#0;class#File#0" expanded="false" />
+            <element signature="docComment;method#toPath#0;class#File#0" expanded="false" />
+            <element signature="method#toPath#0;class#File#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1279" column="0" selection-start-line="1279" selection-start-column="0" selection-end-line="1279" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/generate_pojo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/NoItemsAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/AchiveAnalyzerFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="69" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/PropertiesType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="228" column="18" selection-start-line="228" selection-start-column="18" selection-end-line="228" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2876#2877#0" expanded="true" />
+            <element signature="e#2916#2917#0" expanded="true" />
+            <element signature="e#3139#3140#0" expanded="true" />
+            <element signature="e#3185#3186#0" expanded="true" />
+            <element signature="e#3368#3369#0" expanded="true" />
+            <element signature="e#3395#3396#0" expanded="true" />
+            <element signature="e#3592#3593#0" expanded="true" />
+            <element signature="e#3625#3626#0" expanded="true" />
+            <element signature="e#3816#3817#0" expanded="true" />
+            <element signature="e#3847#3848#0" expanded="true" />
+            <element signature="e#4052#4053#0" expanded="true" />
+            <element signature="e#4089#4090#0" expanded="true" />
+            <element signature="e#4280#4281#0" expanded="true" />
+            <element signature="e#4311#4312#0" expanded="true" />
+            <element signature="e#4516#4517#0" expanded="true" />
+            <element signature="e#4553#4554#0" expanded="true" />
+            <element signature="e#4740#4741#0" expanded="true" />
+            <element signature="e#4769#4770#0" expanded="true" />
+            <element signature="e#4970#4971#0" expanded="true" />
+            <element signature="e#5005#5006#0" expanded="true" />
+            <element signature="e#5202#5203#0" expanded="true" />
+            <element signature="e#5236#5237#0" expanded="true" />
+            <element signature="e#5447#5448#0" expanded="true" />
+            <element signature="e#5487#5488#0" expanded="true" />
+            <element signature="e#5692#5693#0" expanded="true" />
+            <element signature="e#5730#5731#0" expanded="true" />
+            <element signature="e#6192#6193#0" expanded="true" />
+            <element signature="e#6222#6223#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/ScriptType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/ResourceManagementService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <element signature="method#ResourceManagementService#0;class#ResourceManagementService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/IUpdater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/DriversUpdater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="81" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/Updater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/IArchiveAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ScriptsArchiveAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+          <folding>
+            <element signature="e#898#899#0" expanded="true" />
+            <element signature="e#930#931#0" expanded="true" />
+            <element signature="method#copyToOutputDirectory#0;class#ScriptsArchiveAnalyzer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/util/function/BiConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ArchiveAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.758621">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/DriversType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.4716983">
+          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/DriverType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.344828">
+          <caret line="147" column="9" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2294#2295#0" expanded="true" />
+            <element signature="e#2324#2325#0" expanded="true" />
+            <element signature="e#2537#2538#0" expanded="true" />
+            <element signature="e#2573#2574#0" expanded="true" />
+            <element signature="e#2768#2769#0" expanded="true" />
+            <element signature="e#2801#2802#0" expanded="true" />
+            <element signature="e#3010#3011#0" expanded="true" />
+            <element signature="e#3049#3050#0" expanded="true" />
+            <element signature="e#3634#3635#0" expanded="true" />
+            <element signature="e#3682#3683#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/DriverPublisherSettings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22018349">
-          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/DriversArchiveAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1333#1334#0" expanded="true" />
+            <element signature="e#1365#1366#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/ZipHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.586206">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/QualiPublishDriverAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="17.0">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+          <folding>
+            <element signature="method#onSuccess#0;class#2171:5079" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13606557">
+          <caret line="30" column="66" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
           <folding />
         </state>
       </provider>
