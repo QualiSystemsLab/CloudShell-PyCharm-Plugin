@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba394122-d349-4311-bca0-b2d512761525" name="Default" comment="finish plugin changes">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/generate_pojo" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/AuthoringItemType.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/DriverPublisherSettings.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/DriverPublisherSettings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/QualiPublishDriverAction.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/QualiPublishDriverAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/ZipHelper.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/ZipHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/AchiveAnalyzerFactory.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/AchiveAnalyzerFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ArchiveAnalyzer.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ArchiveAnalyzer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/DriversArchiveAnalyzer.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/DriversArchiveAnalyzer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ScriptsArchiveAnalyzer.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ScriptsArchiveAnalyzer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/DriversType.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/DriversType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/ObjectFactory.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/ObjectFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/PropertiesType.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/PropertiesType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/ScriptsType.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/ScriptsType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/SourcesType.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/SourcesType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xml" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xsd" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/DriversUpdater.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/DriversUpdater.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/ScriptsUpdater.java" afterPath="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/updaters/ScriptsUpdater.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="intelli-qs-plugin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,7 +30,7 @@
       <file leaf-file-name="QualiPublishDriverAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/QualiPublishDriverAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="17.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
               <folding>
                 <element signature="method#onSuccess#0;class#2171:5079" expanded="false" />
@@ -57,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deployment.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="deployment.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13606557">
-              <caret line="30" column="66" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
+            <state vertical-scroll-proportion="-29.576923">
+              <caret line="51" column="13" selection-start-line="1" selection-start-column="0" selection-end-line="51" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -70,7 +52,7 @@
       <file leaf-file-name="deployment.xsd" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xsd">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.4716983">
+            <state vertical-scroll-proportion="0.0">
               <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
               <folding />
             </state>
@@ -80,7 +62,7 @@
       <file leaf-file-name="ZipHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/ZipHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.586206">
+            <state vertical-scroll-proportion="0.0">
               <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -92,21 +74,11 @@
       <file leaf-file-name="ArchiveAnalyzer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ArchiveAnalyzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.758621">
+            <state vertical-scroll-proportion="0.0">
               <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BiConsumer.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/util/function/BiConsumer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -147,10 +119,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.2954545">
+              <caret line="57" column="123" selection-start-line="57" selection-start-column="123" selection-end-line="57" selection-end-column="123" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DriverType.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/DriverType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.344828">
+            <state vertical-scroll-proportion="0.0">
               <caret line="147" column="9" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -206,7 +188,6 @@
         <option value="$PROJECT_DIR$/src/QualiPublishDriverAction.java" />
         <option value="$PROJECT_DIR$/src/DriverPublisherSettings.java" />
         <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/AuthoringItemType.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/ScriptsType.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xsd.xml" />
@@ -241,6 +222,7 @@
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xsd" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/QualiPublishDriverAction.java" />
         <option value="$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xml" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -861,20 +843,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28138527" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28108108" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16017316" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16017316" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28731343" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12846482" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -885,6 +866,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -995,7 +977,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="519" column="20" selection-start-line="519" selection-start-column="12" selection-end-line="519" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1003,15 +984,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1019,7 +991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="138" column="11" selection-start-line="138" selection-start-column="11" selection-end-line="138" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1040,9 +1011,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.03794643">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,7 +1029,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1068,7 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="134" column="9" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1076,7 +1043,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.5185184">
           <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1094,7 +1060,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30068028">
           <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1102,7 +1067,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1267" column="23" selection-start-line="1267" selection-start-column="23" selection-end-line="1267" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1110,10 +1074,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.185185">
           <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
-          <folding>
-            <element signature="e#4962#5830#0" expanded="true" />
-            <element signature="e#5829#5830#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1121,10 +1082,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.666667">
           <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
-          <folding>
-            <element signature="e#6083#6237#0" expanded="true" />
-            <element signature="e#6236#6237#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1132,7 +1090,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1162,7 +1119,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1181,11 +1137,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1113" column="20" selection-start-line="1113" selection-start-column="20" selection-end-line="1113" selection-end-column="20" />
-          <folding>
-            <element signature="method#list#0;class#File#0" expanded="false" />
-            <element signature="docComment;method#toPath#0;class#File#0" expanded="false" />
-            <element signature="method#toPath#0;class#File#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1267,7 +1218,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1339,7 +1289,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/archiveAnalizers/ArchiveAnalyzer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.758621">
+        <state vertical-scroll-proportion="0.0">
           <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1359,7 +1309,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.4716983">
+        <state vertical-scroll-proportion="0.0">
           <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
           <folding />
         </state>
@@ -1367,7 +1317,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/DriverType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.344828">
+        <state vertical-scroll-proportion="0.0">
           <caret line="147" column="9" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1407,7 +1357,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/ZipHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.586206">
+        <state vertical-scroll-proportion="0.0">
           <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1417,7 +1367,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/QualiPublishDriverAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="17.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
           <folding>
             <element signature="method#onSuccess#0;class#2171:5079" expanded="false" />
@@ -1427,8 +1377,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/qualisystems/pythonDriverPlugin/deployment/deployment.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13606557">
-          <caret line="30" column="66" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
+        <state vertical-scroll-proportion="-29.576923">
+          <caret line="51" column="13" selection-start-line="1" selection-start-column="0" selection-end-line="51" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2954545">
+          <caret line="57" column="123" selection-start-line="57" selection-start-column="123" selection-end-line="57" selection-end-column="123" />
           <folding />
         </state>
       </provider>
