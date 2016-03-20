@@ -52,7 +52,7 @@ public class ZipHelper {
         fW.close();
     }
 
-    public String zipFiles(String zipFileName, List<String> filePaths)throws IOException
+    public String zipFiles(String zipFileName, List<String> filePaths,Map<String, ByteBuffer> extraFiles)throws IOException
     {
         ZipOutputStream zip = null;
         FileOutputStream fW = null;
@@ -65,6 +65,13 @@ public class ZipHelper {
 
             for (String filePath : filePaths) {
                 addFileToZip("", filePath, zip, false);
+            }
+
+            if(extraFiles != null)
+            {
+                for (Map.Entry<String, ByteBuffer> extraFile : extraFiles.entrySet()) {
+                    addFileToZip("", extraFile.getKey(), zip, false, new ByteArrayInputStream(extraFile.getValue().array(),extraFile.getValue().arrayOffset(), extraFile.getValue().limit()));
+                }
             }
         }
         finally {
@@ -124,7 +131,7 @@ public class ZipHelper {
             String nameInZip = (path.isEmpty() ? path : path + "/") + folder.getName();
 
             for (String filter : _filters)
-                if (nameInZip.equalsIgnoreCase(filter))
+                if (nameInZip.matches(filter))
                     return;
 
             if (folder.isDirectory()) {

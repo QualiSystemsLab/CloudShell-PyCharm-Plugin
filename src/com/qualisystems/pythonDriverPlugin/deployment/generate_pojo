@@ -1,0 +1,3 @@
+## this will generate pojo classes from xsd
+
+xjc -p com.qualisystems.pythonDriverPlugin.deployment -d C:\git\CloudShell-PyCharm-Plugin\src C:\git\CloudShell-PyCharm-Plugin\src\com\qualisystems\pythonDriverPlugin\deployment\deployment.xsd

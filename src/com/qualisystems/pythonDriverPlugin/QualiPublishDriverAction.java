@@ -21,27 +21,17 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.UnknownHostException;
-import java.nio.ByteBuffer;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.HashMap;
-import java.util.Map;
 
 public class QualiPublishDriverAction extends AnAction {
 
     public static final String DeploymentSettingsFileName = "deployment.xml";
-    public static final String DebugSettingsFileName = "debug.xml";
 
-    public static final String DebugSettingsFormatString =
-        "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n" +
-            "<properties>\n" +
-            "<entry key=\"loadFrom\">%s</entry>\n" +
-            "<entry key=\"waitForDebugger\">%s</entry>\n" +
-            "</properties>\n";
 
     @Override
     public void actionPerformed(AnActionEvent anActionEvent) {
@@ -111,10 +101,7 @@ public class QualiPublishDriverAction extends AnAction {
                     IArchiveAnalyzer scriptsAnalyzer = AchiveAnalyzerFactory.createAnalyzer(_settings.scripts, _settings.fileFilters, basePath);
                     HashMap<String, String> arcivedScriptsFiles = scriptsAnalyzer.getArcivedFiles();
 
-                    if(arcivedDriverFiles.size() ==0 && arcivedScriptsFiles.size() ==0)
-                    {
-                        throw new Exception("no items found for publishing");
-                    }
+                    EnsureItemsForPublishing(arcivedDriverFiles, arcivedScriptsFiles);
 
                     IUpdater driversUpdater = UpdaterFactory.createDriversUpdater(_settings);
                     driversUpdater.updateFiles(arcivedDriverFiles);
@@ -128,37 +115,15 @@ public class QualiPublishDriverAction extends AnAction {
                     _exception = e;
                 }
             }
+
+            private void EnsureItemsForPublishing(HashMap<String, String> arcivedDriverFiles, HashMap<String, String> arcivedScriptsFiles) throws Exception {
+                Boolean thereAreNoItemsToPublish = arcivedDriverFiles.size() ==0 && arcivedScriptsFiles.size() ==0;
+                if(thereAreNoItemsToPublish)
+                {
+                    throw new Exception("no items found for publishing");
+                }
+            }
         });
-    }
-
-    private File zipProjectFolder(String directory, DriverPublisherSettings settings) throws Exception {
-
-        Map<String, ByteBuffer> extras = new HashMap<>();
-
-        if (settings.sourceRootFolder != null && !settings.sourceRootFolder.isEmpty()) {
-
-            Path sourceFolder = Paths.get(directory, settings.sourceRootFolder);
-
-            if (!Files.exists(sourceFolder))
-                throw new Exception(String.format("Couldn't find specified source folder \"%s\" as in \"%s\"", settings.sourceRootFolder, sourceFolder.toString()));
-
-            directory = sourceFolder.toString();
-        }
-
-        if (settings.runFromLocalProject) {
-
-            String debugSettingsFileContent = String.format(DebugSettingsFormatString, directory, Boolean.toString(settings.waitForDebugger));
-
-            extras.put(DebugSettingsFileName, StandardCharsets.UTF_8.encode(debugSettingsFileContent));
-        }
-
-        ZipHelper zipHelper = new ZipHelper(extras, settings.fileFilters);
-
-        Path deploymentFilePath = Paths.get(directory, "deployment", settings.driverUniqueName + ".zip");
-
-        zipHelper.zipDir(directory, deploymentFilePath.toString());
-
-        return deploymentFilePath.toFile();
     }
 
     private DriverPublisherSettings getDeploymentSettingsFromFile(File deploymentSettingsFile) throws IOException {

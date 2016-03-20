@@ -11,12 +11,10 @@ public class DriverPublisherSettings {
 
     public String serverRootAddress;
     public int port;
-    public String driverUniqueName;
     public String username;
     public String password;
     public String domain;
     public String[] fileFilters;
-    public String sourceRootFolder;
     public boolean waitForDebugger;
     public boolean runFromLocalProject;
     public DriversType drivers;
@@ -32,13 +30,9 @@ public class DriverPublisherSettings {
 
         settings.serverRootAddress = deploymentProperties.getServerRootAddress();
         settings.port = Integer.parseInt(deploymentProperties.getPort());
-        settings.driverUniqueName = deploymentProperties.getDriverUniqueName();
         settings.username = deploymentProperties.getUsername();
         settings.password = deploymentProperties.getPassword();
         settings.domain = deploymentProperties.getDomain();
-        settings.sourceRootFolder = deploymentProperties.getSourceRootFolder();
-        settings.waitForDebugger = Boolean.parseBoolean(deploymentProperties.getWaitForDebugger());
-        settings.runFromLocalProject = Boolean.parseBoolean(deploymentProperties.getRunFromLocalProject());
 
         String fileFiltersValue = deploymentProperties.getFileFilters();
         String[] extraFilters = fileFiltersValue.isEmpty() ? new String[0] : fileFiltersValue.split(";");
@@ -69,9 +63,6 @@ public class DriverPublisherSettings {
 
         if(deploymentProperties.getWaitForDebugger() == null || deploymentProperties.getWaitForDebugger().isEmpty())
             deploymentProperties.setWaitForDebugger("false");
-
-        if(deploymentProperties.getRunFromLocalProject() == null || deploymentProperties.getRunFromLocalProject().isEmpty())
-            deploymentProperties.setRunFromLocalProject("false");
 
     }
 

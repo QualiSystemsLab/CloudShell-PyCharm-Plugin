@@ -1,11 +1,8 @@
 package com.qualisystems.pythonDriverPlugin.updaters;
 
 import com.qualisystems.pythonDriverPlugin.DriverPublisherSettings;
-import com.qualisystems.pythonDriverPlugin.deployment.AuthoringItemType;
 
 import java.io.File;
-import java.util.List;
-import java.util.Map;
 
 public class DriversUpdater extends Updater {
 
