@@ -14,7 +14,7 @@ public class DriverPublisherSettings {
     public String username;
     public String password;
     public String domain;
-    public String[] fileFilters;
+    public String[] fileFilters = new String[0];
     public boolean waitForDebugger;
     public boolean runFromLocalProject;
     public DriversType drivers;
@@ -35,8 +35,10 @@ public class DriverPublisherSettings {
         settings.domain = deploymentProperties.getDomain();
 
         String fileFiltersValue = deploymentProperties.getFileFilters();
-        String[] extraFilters = fileFiltersValue.isEmpty() ? new String[0] : fileFiltersValue.split(";");
-        settings.fileFilters = (String[])ArrayUtils.addAll(DefaultFileFilters, extraFilters);
+        String[] extraFilters =fileFiltersValue ==null || fileFiltersValue.isEmpty() ? new String[0] : fileFiltersValue.split(";");
+        if(extraFilters.length > 0) {
+            settings.fileFilters = (String[]) ArrayUtils.addAll(DefaultFileFilters, extraFilters);
+        }
 
         settings.drivers = deploymentProperties.getDrivers();
         settings.scripts = deploymentProperties.getScripts();
