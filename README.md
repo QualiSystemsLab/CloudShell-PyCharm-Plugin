@@ -93,4 +93,4 @@ If you don't have PyCharm you can get it from here: https://www.jetbrains.com/py
 
 4. Upon activation the plugin collects and zipps the contents of the project (excluding filtered files, see `deployment.xml` `fileFilters` property),
     the new zip is placed in a folder named `deployment/` in the project root.
-    Then, the plugin uses the settings in the `deployment.xml` file to contact the server and updae the driver files currently online.
+    Then, the plugin uses the settings in the `deployment.xml` file to contact the server and update the driver files currently online.
