@@ -48,7 +48,7 @@ If you don't have PyCharm you can get it from here: https://www.jetbrains.com/py
              on top of the patterns specified here the plugin will automatically filter the "deployment/" and ".idea/" folders and the "deployment.xml" file -->
         <fileFilters>dont_upload_me.xml</fileFilters>
 
-        <-- The drivers to update, holds one or more drivers -->
+        <!-- The drivers to update, holds one or more drivers -->
         <drivers>
            <!-- runFromLocalProject - Decides whether to run the driver from the current project directory for debugging purposes, defaults to "false" -->
            <!-- waitForDebugger - When `runFromLocalProject` is enabled, decides whether to wait for a debugger to attach before running any Python driver code, defaults to "false" -->
@@ -74,7 +74,7 @@ If you don't have PyCharm you can get it from here: https://www.jetbrains.com/py
             </driver>
         </drivers>
 
-        <-- The scripts to update, holds one or more scripts -->
+        <!-- The scripts to update, holds one or more scripts -->
         <scripts>
             <script>
                 <!-- A list of paths to the script's files or folders relative to the project's root.
