@@ -16,12 +16,17 @@ import com.qualisystems.pythonDriverPlugin.deployment.PropertiesType;
 import com.qualisystems.pythonDriverPlugin.updaters.IUpdater;
 import com.qualisystems.pythonDriverPlugin.updaters.UpdaterFactory;
 import org.jetbrains.annotations.NotNull;
+import org.xml.sax.*;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParserFactory;
+import javax.xml.transform.sax.SAXSource;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.UnknownHostException;
@@ -132,8 +137,18 @@ public class QualiPublishDriverAction extends AnAction {
         try {
             InputStream inputStream = Files.newInputStream(deploymentSettingsFile.toPath());
             jaxbContext = JAXBContext.newInstance(ObjectFactory.class);
+
+            SAXParserFactory spf = SAXParserFactory.newInstance();
+            spf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+            spf.setFeature("http://xml.org/sax/features/validation", false);
+
+            XMLReader xmlReader = spf.newSAXParser().getXMLReader();
+            InputSource inputSource = new InputSource(inputStream);
+            SAXSource source = new SAXSource(xmlReader, inputSource);
+
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            JAXBElement<PropertiesType> unmarshalledObject = (JAXBElement<PropertiesType>)unmarshaller.unmarshal(inputStream);
+
+            JAXBElement<PropertiesType> unmarshalledObject = (JAXBElement<PropertiesType>)unmarshaller.unmarshal(source);
 
             PropertiesType properties = unmarshalledObject.getValue();
             DriverPublisherSettings settings = DriverPublisherSettings.fromProperties(properties);
@@ -141,6 +156,15 @@ public class QualiPublishDriverAction extends AnAction {
 
         } catch (JAXBException e) {
             throw new IOException(e);
+        } catch (SAXNotSupportedException e) {
+            e.printStackTrace();
+        } catch (SAXNotRecognizedException e) {
+            e.printStackTrace();
+        } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
         }
+        return null;
     }
 }
